@@ -1,4 +1,6 @@
 Emailapp::Application.routes.draw do
+  resources :contacts
+
   resources :users
 
   # The priority is based upon order of creation:
