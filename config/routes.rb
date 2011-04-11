@@ -1,4 +1,8 @@
 Emailapp::Application.routes.draw do
+  get "home/index"
+
+  get "home/about"
+
   resources :contacts
 
   resources :users
