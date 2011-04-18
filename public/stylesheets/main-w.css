@@ -79,7 +79,7 @@ body {
   height: 60px;
   background-color: #000;
   color: #FFF;
-  
+  clear: both;  
 }
 
 #footer p {
@@ -91,4 +91,59 @@ body {
 
 }
 
+#event {
+  margin: 5px 30px 5px 100px;
+  width: 300px;
+  float: left;
+  color: #555522;
+}
+
+#event ul {
+  clear: both;
+
+}
+
+#event ul+ul {
+  border-top: solid 1px #999;
+
+}
+
+
+#event li {
+  float: left;
+  width: 200px;
+}
+
+#event li+li {
+  width: 95px;
+  float: right;
+  
+}
+
+#contact {
+  margin: 5px 20px 5px 0px;
+  width: 200px;
+  float: left;
+  color: #333366;
+}
+
+#contact ul {
+  clear: both;
+}
+
+#contact ul+ul {
+  border-top: solid 1px #999;
+}
+
+
+
+#contact li {
+  width: 145px;
+  float: left;
+}
+
+#contact li+li {
+  width: 50px; 
+  float: right;
+}
 
