@@ -15,6 +15,7 @@
 
 <div id="contact" >
   <h2>Contacts</h2>
+  <%= link_to 'Add a New Contact', new_contact_path %>
   <% @contacts.each do |contact| %>
    <ul>
      <li><%= contact.first %> <%= contact.last %></li>
