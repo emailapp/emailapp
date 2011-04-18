@@ -1,7 +1,12 @@
 /* Cheng-Hsin */
-h1, h2, h3, p, div {
+h1, h2, h3, p, div, ul, li {
   padding:0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+
 }
 
 
@@ -33,7 +38,7 @@ body {
 }
 
 #content {
-  margin-top: 50px;
+  margin-top: 55px;
   padding: 3px 10px;
 
 
@@ -46,19 +51,27 @@ body {
 
 #navigation {
   position: absolute;
+  height: 50px;
   top: 100px;
   width: 900px;
   background-color: #000;
   color: #FFF;
 }
 
+#navigation ul {
+  margin-top: 15px;
+
+}
+
 #navigation li {
   display: inline;
   
 }
+
 #navigation a {
   color: #FFF;
   margin: 0 10px;
+  font-size: 14px;
  }
 
 
