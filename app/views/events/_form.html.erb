@@ -25,11 +25,14 @@
   </div>
   <div class="field">
     <%= f.label :message %><br />
-    <%= f.text_field :message %>
+    <%= f.text_area :message, :rows => 6 %>
   </div>
   <div class="field">
     <%= f.label :contacts %><br />
-    <%= f.text_field :contacts %>
+    <%= collection_select(:event, :contacts, Contact.all, :email, :first, { :prompt => "-Select contacts" }, {:multiple => true, :size => '20' }) %>
+    
+    </select>
+
   </div>
   <div class="actions">
     <%= f.submit %>
