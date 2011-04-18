@@ -9,8 +9,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="page">
 
+<div id="header">
+<hi>Scheduling Emails</hi>
+</div>
+
+
+<div id="content">
 <%= yield %>
+</div>
 
 <div id="navigation">
   <ul>
@@ -23,7 +31,7 @@
 <div id="footer">
 		<p>Valid W3C <a href="http://validator.w3.org/check/referer" rel="external">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS</a></p>
 </div>
-
+</div>
 
 </body>
 </html>
