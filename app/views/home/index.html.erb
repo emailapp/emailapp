@@ -12,6 +12,7 @@
 
 <div id="event" >
   <h2>Events</h2>
+  <%= button_to 'Add a New Event', line_items_path(:product_id => product) %>
   <% @events.each do |event| %>
    <ul>
      <li><%= event.name %></li>
@@ -19,14 +20,4 @@
    </ul>
   <% end %>
 </div>
-
-<div id="navigation">
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-
-  </ul>
-
-</div>
-
 
