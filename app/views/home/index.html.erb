@@ -1,22 +1,24 @@
 <h1>Welcome to Use Email Scheduling App</h1>
 
+
+
+<div id="event" >
+  <h2>Events</h2>
+  <%= link_to 'Add a New Event', new_event_path %>
+  <% @events.each do |event| %>
+   <ul>
+     <li><%= event.name %></li>
+     <li><%= event.time %></li>
+   </ul>
+  <% end %>
+</div>
+
 <div id="contact" >
   <h2>Contacts</h2>
   <% @contacts.each do |contact| %>
    <ul>
      <li><%= contact.first %> <%= contact.last %></li>
      <li><%= contact.birthday %></li>
-   </ul>
-  <% end %>
-</div>
-
-<div id="event" >
-  <h2>Events</h2>
-  <%= link_to 'Add a New Event', events_path %>
-  <% @events.each do |event| %>
-   <ul>
-     <li><%= event.name %></li>
-     <li><%= event.time %></li>
    </ul>
   <% end %>
 </div>
