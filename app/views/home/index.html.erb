@@ -1,13 +1,32 @@
 <h1>Welcome to Use Email Scheduling App</h1>
-<p>Find me in app/views/home/index.html.erb</p>
 
-<h1>Events</h1>
-<% @events.each do |event| %>
-<div class="event" >
-  <ul>
-    <li><%= event.name %></li>
-    <li><%= event.time %></li>
-  </ul>
+<div id="contact" >
+  <h2>Contacts</h2>
+  <% @contacts.each do |contact| %>
+   <ul>
+     <li><%= contact.first %> <%= contact.last %></li>
+     <li><%= contact.birthday %></li>
+   </ul>
+  <% end %>
 </div>
-<% end %>
+
+<div id="event" >
+  <h2>Events</h2>
+  <% @events.each do |event| %>
+   <ul>
+     <li><%= event.name %></li>
+     <li><%= event.time %></li>
+   </ul>
+  <% end %>
+</div>
+
+<div id="navigation">
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+
+  </ul>
+
+</div>
+
 
