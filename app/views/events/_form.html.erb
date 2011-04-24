@@ -27,12 +27,16 @@
     <%= f.label :message %><br />
     <%= f.text_area :message, :rows => 6 %>
   </div>
-  <div class="field">
-    <%= f.label :contacts %><br />
-    <% @contacts.each do |contact| %>
-    <%= check_box_tag "event[contacts][]", "#{contact.id}", false, :id => "email_#{contact.id}" %>
-    <%= "#{contact.first} #{contact.last} <#{contact.email}>" %>
-    <% end %>
+  <div class="contacts-list">
+    <%# f.label :contacts %>
+    <ul>
+      <% @contacts.each do |contact| %>
+      <li>
+        <%= check_box_tag "event[contacts][]", "#{contact.id}", false, :id => "email_#{contact.id}" %>
+        <%= label_tag "email_#{contact.id}", "#{contact.first} #{contact.last} <#{contact.email}>" %>
+      </li>
+      <% end %>
+    </ul>
 
 
     <%# collection_select(:event, :contacts, Contact.all, :email, :full_name, { :prompt => "-Select contacts" }, {:multiple => true, :size => '20' }) %>
