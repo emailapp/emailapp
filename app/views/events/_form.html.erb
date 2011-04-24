@@ -29,7 +29,13 @@
   </div>
   <div class="field">
     <%= f.label :contacts %><br />
-    <%= collection_select(:event, :contacts, Contact.all, :email, :full_name, { :prompt => "-Select contacts" }, {:multiple => true, :size => '20' }) %>
+    <% @contacts.each do |contact| %>
+    <%= check_box_tag "event[contacts][]", "#{contact.id}", false, :id => "email_#{contact.id}" %>
+    <%= "#{contact.first} #{contact.last} <#{contact.email}>" %>
+    <% end %>
+
+
+    <%# collection_select(:event, :contacts, Contact.all, :email, :full_name, { :prompt => "-Select contacts" }, {:multiple => true, :size => '20' }) %>
     
     </select>
 
