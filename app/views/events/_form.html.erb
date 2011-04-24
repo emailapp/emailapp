@@ -32,7 +32,7 @@
     <ul>
       <% @contacts.each do |contact| %>
       <li>
-        <%= check_box_tag "event[contacts][]", "#{contact.id}", false, :id => "email_#{contact.id}" %>
+        <%= check_box_tag "event[contacts][]", "#{contact.id}", check_contact(contact.id), :id => "email_#{contact.id}" %>
         <%= label_tag "email_#{contact.id}", "#{contact.first} #{contact.last} <#{contact.email}>" %>
       </li>
       <% end %>
