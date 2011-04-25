@@ -7,7 +7,7 @@
   <%= link_to 'Add a New Event', new_event_path %>
   <% @events.each do |event| %>
    <ul>
-     <li><%= event.name %></li>
+     <li><%= link_to "#{event.name}", edit_event_path(event) %></li>
      <li><%= event.schedule_time %></li>
    </ul>
   <% end %>
@@ -18,7 +18,7 @@
   <%= link_to 'Add a New Contact', new_contact_path %>
   <% @contacts.each do |contact| %>
    <ul>
-     <li><%= contact.first %> <%= contact.last %></li>
+     <li><%= link_to "#{contact.first} #{contact.last}", edit_contact_path(contact) %></li>
      <li><%= contact.birthday %></li>
    </ul>
   <% end %>
