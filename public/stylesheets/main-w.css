@@ -98,6 +98,18 @@ body {
   color: #555522;
 }
 
+#event ul a {
+  color: #555522;
+  text-decoration: none;
+  display: block;
+
+}
+
+#event ul a:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
 #event ul {
   clear: both;
 
@@ -126,6 +138,18 @@ body {
   float: left;
   color: #333366;
 }
+
+#contact ul a {
+  color: #333366;
+  text-decoration: none;
+
+}
+
+#contact ul a:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
 
 #contact ul {
   clear: both;
