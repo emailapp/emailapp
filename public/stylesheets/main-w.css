@@ -142,6 +142,7 @@ body {
 #contact ul a {
   color: #333366;
   text-decoration: none;
+  display: block;
 
 }
 
@@ -170,4 +171,6 @@ body {
   width: 50px; 
   float: right;
 }
+
+/*  */
 

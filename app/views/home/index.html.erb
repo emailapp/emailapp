@@ -8,7 +8,7 @@
   <% @events.each do |event| %>
    <ul>
      <li><%= link_to "#{event.name}", edit_event_path(event) %></li>
-     <li><%= event.schedule_time %></li>
+     <li><%= event.schedule_time %> <%= link_to 'delete', event, :confirm => 'Are you sure?', :method => :delete %></li>
    </ul>
   <% end %>
 </div>
@@ -19,7 +19,7 @@
   <% @contacts.each do |contact| %>
    <ul>
      <li><%= link_to "#{contact.first} #{contact.last}", edit_contact_path(contact) %></li>
-     <li><%= contact.birthday %></li>
+     <li><%= contact.birthday %> <%= link_to 'delete', contact, :confirm => 'Are you sure?', :method => :delete %></li>
    </ul>
   <% end %>
 </div>
