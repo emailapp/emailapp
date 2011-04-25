@@ -92,8 +92,8 @@ body {
 }
 
 #event {
-  margin: 5px 30px 5px 100px;
-  width: 300px;
+  margin: 5px 30px 5px 60px;
+  width: 375px;
   float: left;
   color: #555522;
 }
@@ -126,15 +126,9 @@ body {
   width: 200px;
 }
 
-#event li+li {
-  width: 95px;
-  float: right;
-  
-}
-
 #contact {
   margin: 5px 20px 5px 0px;
-  width: 200px;
+  width: 320px;
   float: left;
   color: #333366;
 }
@@ -167,9 +161,17 @@ body {
   float: left;
 }
 
-#contact li+li {
-  width: 50px; 
-  float: right;
+#contact .date, #event .date {
+  width: 90px;
+  min-height: 1em;
+}
+
+#contact .edit, #event .edit {
+  width: 40px;
+}
+
+#contact .delete, #event .delete {
+  width: 40px;
 }
 
 /*  */
