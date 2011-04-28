@@ -1,0 +1,41 @@
+<%= form_for(@smtp_info) do |f| %>
+  <% if @smtp_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@smtp_info.errors.count, "error") %> prohibited this smtp_info from being saved:</h2>
+
+      <ul>
+      <% @smtp_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :port %><br />
+    <%= f.text_field :port %>
+  </div>
+  <div class="field">
+    <%= f.label :authentication %><br />
+    <%= f.text_field :authentication %>
+  </div>
+  <div class="field">
+    <%= f.label :starttls %><br />
+    <%= f.check_box :starttls %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

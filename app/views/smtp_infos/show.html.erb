@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @smtp_info.user_name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @smtp_info.password %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @smtp_info.host %>
+</p>
+
+<p>
+  <b>Port:</b>
+  <%= @smtp_info.port %>
+</p>
+
+<p>
+  <b>Authentication:</b>
+  <%= @smtp_info.authentication %>
+</p>
+
+<p>
+  <b>Starttls:</b>
+  <%= @smtp_info.starttls %>
+</p>
+
+
+<%= link_to 'Edit', edit_smtp_info_path(@smtp_info) %> |
+<%= link_to 'Back', smtp_infos_path %>

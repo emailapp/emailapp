@@ -1,0 +1,33 @@
+<h1>Listing smtp_infos</h1>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Password</th>
+    <th>Host</th>
+    <th>Port</th>
+    <th>Authentication</th>
+    <th>Starttls</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @smtp_infos.each do |smtp_info| %>
+  <tr>
+    <td><%= smtp_info.user_name %></td>
+    <td><%= smtp_info.password %></td>
+    <td><%= smtp_info.host %></td>
+    <td><%= smtp_info.port %></td>
+    <td><%= smtp_info.authentication %></td>
+    <td><%= smtp_info.starttls %></td>
+    <td><%= link_to 'Show', smtp_info %></td>
+    <td><%= link_to 'Edit', edit_smtp_info_path(smtp_info) %></td>
+    <td><%= link_to 'Destroy', smtp_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Smtp info', new_smtp_info_path %>

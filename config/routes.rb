@@ -1,4 +1,6 @@
 Emailapp::Application.routes.draw do
+  resources :smtp_infos
+
   resources :events
 
   get "home/index"
