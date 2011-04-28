@@ -1,2 +1,30 @@
 <h1>Welcome to Use Email Scheduling App</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+
+<div id="event" >
+  <h2>Events</h2>
+  <%= link_to 'Add a New Event', new_event_path %>
+  <% @events.each do |event| %>
+   <ul>
+     <li><%= link_to "#{event.name}", event %></li>
+     <li class="date"><%= event.schedule_time %></li>
+     <li class="edit"><%= link_to 'edit', edit_event_path(event) %></li>
+     <li class="delete"><%= link_to 'delete', event, :confirm => 'Are you sure?', :method => :delete %></li>
+   </ul>
+  <% end %>
+</div>
+
+<div id="contact" >
+  <h2>Contacts</h2>
+  <%= link_to 'Add a New Contact', new_contact_path %>
+  <% @contacts.each do |contact| %>
+   <ul>
+     <li><%= link_to "#{contact.first} #{contact.last}", contact %></li>
+     <li class="date"><%= contact.birthday %></li>
+     <li class="edit"><%= link_to 'edit', edit_contact_path(contact) %></li>
+     <li class="delete"><%= link_to 'delete', contact, :confirm => 'Are you sure?', :method => :delete %></li>
+   </ul>
+  <% end %>
+</div>
+

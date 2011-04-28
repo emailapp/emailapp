@@ -1,0 +1,50 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule_time %><br />
+    <%= f.text_field :schedule_time %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_area :message, :rows => 6 %>
+  </div>
+  <div class="contacts-list">
+    <%# f.label :contacts %>
+    <ul>
+      <% @contacts.each do |contact| %>
+      <li>
+        <%= check_box_tag "event[contacts][]", "#{contact.id}", check_contact(contact.id), :id => "email_#{contact.id}" %>
+        <%= label_tag "email_#{contact.id}", "#{contact.first} #{contact.last} <#{contact.email}>" %>
+      </li>
+      <% end %>
+    </ul>
+
+
+    <%# collection_select(:event, :contacts, Contact.all, :email, :full_name, { :prompt => "-Select contacts" }, {:multiple => true, :size => '20' }) %>
+    
+    </select>
+
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,1 +1,88 @@
 /* Cheng-Hsin */
+
+
+#event {
+  margin: 5px 30px 5px 60px;
+  width: 375px;
+  float: left;
+  color: #555522;
+}
+
+#event ul a {
+  color: #555522;
+  text-decoration: none;
+  display: block
+
+}
+
+#event ul a:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+#event ul {
+  clear: both;
+
+}
+
+#event ul+ul {
+  border-top: solid 1px #999;
+
+}
+
+
+#event li {
+  float: left;
+  width: 200px;
+}
+
+#contact {
+  margin: 5px 20px 5px 0px;
+  width: 320px;
+  float: left;
+  color: #333366;
+}
+
+#contact ul a {
+  color: #333366;
+  text-decoration: none;
+  display: block;
+
+}
+
+#contact ul a:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+
+#contact ul {
+  clear: both;
+}
+
+#contact ul+ul {
+  border-top: solid 1px #999;
+}
+
+
+
+#contact li {
+  width: 145px;
+  float: left;
+}
+
+#contact .date, #event .date {
+  width: 90px;
+  min-height: 1em;
+}
+
+#contact .edit, #event .edit {
+  width: 40px;
+}
+
+#contact .delete, #event .delete {
+  width: 40px;
+}
+
+/*  */
+
