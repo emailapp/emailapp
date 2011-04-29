@@ -3,8 +3,8 @@
 
 
 <div id="event" >
-  <h2>Events</h2>
-  <%= link_to 'Add a New Event', new_event_path %>
+  <h2><%= link_to 'Events', events_path, :title => "See all events" %></h2>
+  <%= link_to 'Create a New Event', new_event_path %>
   <% @events.each do |event| %>
    <ul>
      <li><%= link_to "#{event.name}", event %></li>
@@ -16,7 +16,7 @@
 </div>
 
 <div id="contact" >
-  <h2>Contacts</h2>
+  <h2><%= link_to 'Contacts', contacts_path, :title => "See all contacts" %></h2>
   <%= link_to 'Add a New Contact', new_contact_path %>
   <% @contacts.each do |contact| %>
    <ul>
