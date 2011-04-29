@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all
+    @events = Event.find(:all).sort_by {|e| change_date_format(e.schedule_time)}
 
     respond_to do |format|
       format.html # index.html.erb
