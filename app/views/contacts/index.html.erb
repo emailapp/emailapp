@@ -13,9 +13,9 @@
 
 <% @contacts.each do |contact| %>
   <tr>
-    <td><%= contact.email %></td>
     <td><%= contact.first %></td>
     <td><%= contact.last %></td>
+    <td><%= contact.email %></td>
     <td><%= contact.birthday %></td>
     <td><%= link_to 'Show', contact %></td>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>

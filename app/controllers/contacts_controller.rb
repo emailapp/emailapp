@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
   def index
-    @contacts = Contact.all
+    @contacts = Contact.find(:all, :order => "first ASC, last ASC")
 
     respond_to do |format|
       format.html # index.html.erb
