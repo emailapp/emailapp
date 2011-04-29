@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
     #@events = Event.find(:all).sort_by {|e| change_date_format(e.schedule_time)} #string sorting
-    @events = Event.find(:all, :order => "schedule_time DESC", :conditions => ["schedule_time > ?", Date.today], :limit => 20)
-    @contacts = Contact.all
+    @events = Event.find(:all, :order => "schedule_time ASC", :conditions => ["schedule_time > ?", Date.today], :limit => 20)
+    @contacts = Contact.find(:all, :order => "created_at DESC", :limit => 20)
   end
 
   def about
