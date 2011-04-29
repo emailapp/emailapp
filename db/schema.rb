@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428075844) do
+ActiveRecord::Schema.define(:version => 20110429181914) do
 
   create_table "contacts", :force => true do |t|
     t.string   "email"
     t.string   "first"
     t.string   "last"
-    t.string   "birthday"
+    t.date     "birthday",   :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "user_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20110428075844) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
-    t.string   "schedule_time"
+    t.date     "schedule_time", :limit => 255
     t.string   "subject"
     t.text     "message"
     t.text     "contacts"
