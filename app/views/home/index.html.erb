@@ -4,7 +4,7 @@
 
 <div id="event" >
   <h2><%= link_to 'Events', events_path, :title => "See all events" %></h2>
-  <%= link_to 'Create a New Event', new_event_path %>
+  <%= link_to 'Create a New Event', new_event_path, :class => "create" %>
   <% @events.each do |event| %>
    <ul>
      <li class="event-item"><%= link_to raw("<span>#{event.schedule_time.to_s(:date)}</span> #{event.name}"), event %></li>
@@ -12,11 +12,12 @@
      <li class="delete"><%= link_to 'delete', event, :confirm => 'Are you sure?', :method => :delete %></li>
    </ul>
   <% end %>
+  <p class="link-to-more"><%= link_to 'see all events', events_path %><p>
 </div>
 
 <div id="contact" >
   <h2><%= link_to 'Contacts', contacts_path, :title => "See all contacts" %></h2>
-  <%= link_to 'Add a New Contact', new_contact_path %>
+  <%= link_to 'Add a New Contact', new_contact_path, :class => "create" %>
   <% @contacts.each do |contact| %>
    <ul>
      <li class="contact-item"><%= link_to raw("#{contact.first} #{contact.last} <span>#{contact.birthday.to_s(:bd)}</span>"), contact %></li>
@@ -24,5 +25,6 @@
      <li class="delete"><%= link_to 'delete', contact, :confirm => 'Are you sure?', :method => :delete %></li>
    </ul>
   <% end %>
+  <p class="link-to-more"><%= link_to 'see all contacts', contacts_path %><p>
 </div>
 
