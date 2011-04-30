@@ -8,6 +8,11 @@
   color: #555522;
 }
 
+#event h2 a {
+  color: #555522;
+  text-decoration: none;
+}
+
 #event ul a {
   color: #555522;
   text-decoration: none;
@@ -33,14 +38,25 @@
 
 #event li {
   float: left;
-  width: 200px;
+  width: 290px;
+}
+
+#event li span {
+  display: inline-block;
+  width: 80px;
+  height: 1.2em;
 }
 
 #contact {
   margin: 5px 20px 5px 0px;
-  width: 320px;
+  width: 345px;
   float: left;
   color: #333366;
+}
+
+#contact h2 a {
+  color: #333366;
+  text-decoration: none;
 }
 
 #contact ul a {
@@ -67,13 +83,16 @@
 
 
 #contact li {
-  width: 145px;
+  width: 260px;
   float: left;
 }
 
-#contact .date, #event .date {
-  width: 90px;
-  min-height: 1em;
+#contact li span {
+  display: inline-block;
+  width: 50px;
+  height: 1.2em;
+  float: right;
+  margin-right: 5px;
 }
 
 #contact .edit, #event .edit {
