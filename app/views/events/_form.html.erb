@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :schedule_time %><br />
-    <%= f.text_field(:schedule_time, :id => "datepicker") %>
+    <%= f.text_field :schedule_time, :id => "datepicker", :value => "#{if !@event.schedule_time.nil? then @event.schedule_time.to_s(:date) end}" %>
 
   </div>
   <div class="field">

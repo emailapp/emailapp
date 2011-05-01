@@ -17,7 +17,7 @@
 
 <p>
   <b>Birthday:</b>
-  <%= @contact.birthday %>
+  <%= if !@contact.birthday.nil? then @contact.birthday.to_s(:bd) end %>
 </p>
 
 
