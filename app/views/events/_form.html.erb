@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :schedule_time %><br />
-    <%= f.date_select :schedule_time, :order => [:month, :day, :year], :start_year => Time.now.year %>
+    <%= f.text_field(:schedule_time, :id => "datepicker") %>
   </div>
   <div class="field">
     <%= f.label :subject %><br />
