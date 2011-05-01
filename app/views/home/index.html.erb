@@ -20,7 +20,7 @@
   <%= link_to 'Add a New Contact', new_contact_path, :class => "create" %>
   <% @contacts.each do |contact| %>
    <ul>
-     <li class="contact-item"><%= link_to raw("#{contact.first} #{contact.last} <span>#{contact.birthday.to_s(:bd)}</span>"), contact %></li>
+     <li class="contact-item"><%= link_to raw("#{contact.first} #{contact.last} <span>#{if !contact.birthday.nil? then contact.birthday.to_s(:bd) end}</span>"), contact %></li>
      <li class="edit"><%= link_to 'edit', edit_contact_path(contact) %></li>
      <li class="delete"><%= link_to 'delete', contact, :confirm => 'Are you sure?', :method => :delete %></li>
    </ul>
