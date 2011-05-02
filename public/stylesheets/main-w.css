@@ -6,6 +6,18 @@
   text-decoration: none;
 }
 
+#content a.error-link {
+  color: #FFF;
+  font-size: 1.5em;
+  border-bottom: solid 1px #FFF;
+}
+
+#content a.error-link:hover {
+  background-color: #000;
+  border-bottom: none;
+}
+
+
 #event h2, #contact h2 {
   margin-bottom: 5px;
 }
