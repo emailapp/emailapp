@@ -20,7 +20,9 @@ class Event < ActiveRecord::Base
   #end
 
   def schedule_time_string
-    schedule_time.to_s(:date)
+    if !schedule_time.nil? then
+      schedule_time.to_s(:date)
+    end
   end
 
   def schedule_time_string=(schedule_time_str)
