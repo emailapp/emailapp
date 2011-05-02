@@ -2,11 +2,11 @@ class SmtpInfosController < ApplicationController
   # GET /smtp_infos
   # GET /smtp_infos.xml
   def index
-    @smtp_infos = SmtpInfo.all
+    #@smtp_infos = SmtpInfo.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @smtp_infos }
+      format.html { redirect_to(new_smtp_info_path) }
+      format.xml  { head :ok }
     end
   end
 
@@ -24,11 +24,20 @@ class SmtpInfosController < ApplicationController
   # GET /smtp_infos/new
   # GET /smtp_infos/new.xml
   def new
-    @smtp_info = SmtpInfo.new
+    smtp = SmtpInfo.find(:first)
+    if smtp.nil? then
+      @smtp_info = SmtpInfo.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @smtp_info }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @smtp_info }
+      end
+    
+    else
+      respond_to do |format|
+        format.html { redirect_to(edit_smtp_info_path(smtp)) }
+        format.xml  { head :ok }
+      end
     end
   end
 

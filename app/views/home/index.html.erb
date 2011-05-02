@@ -1,6 +1,9 @@
-<h1></h1>
-
-
+<% if @smtp_info.nil? %>
+  <div id="error_explanation">
+    <h2><%= link_to "You haven't set up your email account!", new_smtp_info_path %></h2>
+  </div>
+<% end %>
+<%#= link_to 'delete', @smtp_info, :confirm => 'Are you sure?', :method => :delete %>
 
 <div id="event" >
   <h2><%= link_to 'Events', events_path, :title => "See all events" %></h2>
