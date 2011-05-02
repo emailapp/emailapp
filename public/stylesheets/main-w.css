@@ -158,5 +158,42 @@
   width: 40px;
 }
 
+.events-index {
+  border-collapse:collapse;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.events-index td {
+  border-top: 1px solid #333;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.events-index .sent {
+  color: #777;
+}
+
+.events-index td.e-message {
+  width: 290px;
+  text-align: left;
+}
+
+.events-index td.e-subject {
+  width: 150px;
+  text-align: left;
+}
+
+.events-index .e-time {
+  width: 80px;
+}
+
+.events-index .e-name {
+  width: 100px;
+}
+
+
+
+
 /*  */
 

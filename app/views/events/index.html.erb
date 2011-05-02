@@ -1,6 +1,8 @@
 <h1>events</h1>
 
-<table>
+<%= link_to 'New Event', new_event_path %>
+
+<table class="events-index">
   <tr>
     <th class="e-name">Name</th>
     <th class="e-time">Time</th>
@@ -17,8 +19,8 @@
   <tr class="<%= htmclass %>">
     <td><%= event.name %></td>
     <td><%= event.schedule_time.to_s(:date) %></td>
-    <td><%= event.subject %></td>
-    <td><%= event.message %></td>
+    <td class="e-subject"><%= event.subject %></td>
+    <td class="e-message"><%= event.message %></td>
     <td><%= event.contacts %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
@@ -27,6 +29,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Event', new_event_path %>
