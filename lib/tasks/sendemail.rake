@@ -10,11 +10,8 @@ task :sendemail => :environment do
     :enable_starttls_auto => smtp.starttls  
   }
   
-  #event_array = Event.find(:all, :conditions => ["schedule_time > ? AND schedule_time < ? AND status = 0", Date.today.prev_day, Date.today.next_day ])
-  event_array = Event.find(:all, :conditions => ["status = 0 AND schedule_time > ?", Date.today])
+  event_array = Event.find(:all, :conditions => ["status = 0 AND schedule_time = ?", Date.today])
 
-  puts event_array.length
-  
   event_array.each do |event|
   
     if !event.contacts.blank? then
@@ -23,9 +20,9 @@ task :sendemail => :environment do
       contact_array.each do |contact_id| 
  
         mail_info = Contact.find(contact_id)
-#        ScheduleMailer.send_event_mails(mail_info, event, smtp.user_name).deliver
-        puts mail_info.email
-        puts event.status
+        ScheduleMailer.send_event_mails(mail_info, event, smtp.user_name).deliver
+        puts "Send to " + mail_info.email
+        event.update_attribute(:status, 1)
       end
         
     end
