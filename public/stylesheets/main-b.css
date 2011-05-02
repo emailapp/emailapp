@@ -83,6 +83,7 @@ body {
 
 #navigation ul {
   margin-top: 15px;
+  margin-left: 5px;
 }
 
 #navigation li {
@@ -95,6 +96,7 @@ body {
   margin: 0 10px;
   font-size: 14px;
   text-decoration: none;
+  text-shadow:2px 2px 4px #000;
 }
 
 /*#navigation a:hover {
