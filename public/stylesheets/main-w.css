@@ -158,7 +158,7 @@
   width: 40px;
 }
 
-.events-index {
+.events-index, .contacts-index {
   border-collapse:collapse;
   margin-top: 8px;
   margin-bottom: 10px;
@@ -192,8 +192,26 @@
   width: 100px;
 }
 
+.contacts-index td {
+  border-top: 1px solid #333;
+  padding: 0 4px;
+}
 
+.contacts-index .c-first {
+  width: 120px;
+}
 
+.contacts-index .c-last {
+  width: 120px;
+}
+
+.contacts-index .c-email {
+  width: 250px;
+}
+
+.contacts-index .c-bd {
+  width: 90px;
+}
 
 /*  */
 

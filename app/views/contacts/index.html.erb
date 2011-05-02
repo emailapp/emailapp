@@ -1,10 +1,13 @@
 <h1>contacts</h1>
-<table>
+
+<%= link_to 'New Contact', new_contact_path %>
+
+<table class="contacts-index">
   <tr>
-    <th>Email</th>
-    <th>First</th>
-    <th>Last</th>
-    <th>Birthday</th>
+    <th class="c-first">First</th>
+    <th class="c-last">Last</th>
+    <th class="c-email">Email</th>
+    <th class="c-bd">Birthday</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,7 +25,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Contact', new_contact_path %>
