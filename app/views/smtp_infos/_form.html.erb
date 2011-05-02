@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_name %><br />
+    <%= f.label :user_name %> <span class="example">ex: yourgmailaccount@gmail.com</span><br />
     <%= f.text_field :user_name %>
   </div>
   <div class="field">
@@ -20,19 +20,19 @@
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :host %><br />
+    <%= f.label :host %> <span class="example">ex: smtp.gmail.com</span><br />
     <%= f.text_field :host %>
   </div>
   <div class="field">
-    <%= f.label :port %><br />
+    <%= f.label :port %> <span class="example">ex: 587</span><br />
     <%= f.text_field :port %>
   </div>
   <div class="field">
-    <%= f.label :authentication %><br />
+    <%= f.label :authentication %> <span class="example">ex: plain or login</span><br />
     <%= f.text_field :authentication %>
   </div>
   <div class="field">
-    <%= f.label :starttls %><br />
+    <%= f.label :starttls %>
     <%= f.check_box :starttls %>
   </div>
   <div class="actions">

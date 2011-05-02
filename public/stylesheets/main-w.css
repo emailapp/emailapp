@@ -6,6 +6,12 @@
   text-decoration: none;
 }
 
+.example {
+  color: #666;
+  font-size: 0.9em;
+
+}
+
 #content a.error-link {
   color: #FFF;
   font-size: 1.5em;
@@ -49,7 +55,7 @@
 }
 
 #event {
-  margin: 5px 30px 5px 60px;
+  margin: 5px 30px 15px 60px;
   width: 375px;
   float: left;
   color: #555522;
@@ -96,7 +102,7 @@
 }
 
 #contact {
-  margin: 5px 20px 5px 0px;
+  margin: 5px 20px 15px 0px;
   width: 345px;
   float: left;
   color: #333366;
