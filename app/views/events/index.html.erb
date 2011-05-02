@@ -2,18 +2,19 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Time</th>
-    <th>Subject</th>
-    <th>Message</th>
-    <th>Contacts</th>
+    <th class="e-name">Name</th>
+    <th class="e-time">Time</th>
+    <th class="e-subject">Subject</th>
+    <th class="e-message">Message</th>
+    <th class="e-contacts">Contacts</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @events.each do |event| %>
-  <tr>
+  <% if event.status == 0 then htmclass="unsent" else htmclass="sent" end %>
+  <tr class="<%= htmclass %>">
     <td><%= event.name %></td>
     <td><%= event.schedule_time.to_s(:date) %></td>
     <td><%= event.subject %></td>
