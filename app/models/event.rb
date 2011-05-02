@@ -10,14 +10,30 @@ class Event < ActiveRecord::Base
   validates :name, :subject, :message, :presence => true
   #validates :schedule_time, :format => {:with => /\d{2}\/\d{2}\/\d{4}/, :message => "must be in the mm/dd/yyyy format"}
   
-  validate :schedule_time_is_valid
  
-  def schedule_time_is_valid
-    if schedule_time_before_type_cast.blank?
-      errors.add(:schedule_time, "can't be blank")
-    elsif schedule_time.blank?
-      errors.add(:schedule_time, "must be in the mm/dd/yyyy format")
-    end
+  #def schedule_time_is_valid
+  #  if schedule_time_before_type_cast.blank?
+  #    errors.add(:schedule_time, "can't be blank")
+  #  elsif schedule_time.blank?
+  #    errors.add(:schedule_time, "must be in the mm/dd/yyyy format")
+  #  end
+  #end
+
+  def schedule_time_string
+    schedule_time.to_s(:date)
   end
+
+  def schedule_time_string=(schedule_time_str)
+    self.schedule_time = Date.strptime(schedule_time_str, "%m/%d/%Y")
+  rescue ArgumentError
+    @schedule_time_invalid = true
+  end
+  
+  validate :schedule_time_is_valid
+  
+  def schedule_time_is_valid
+    errors.add(:schedule_time, "must be in the mm/dd/yyyy format and valid date") if @schedule_time_invalid
+  end
+
 
 end
