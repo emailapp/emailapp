@@ -5,7 +5,7 @@ class ChangeDateType < ActiveRecord::Migration
     rename_column :events, :schedule_time, :schedule_time_string
     add_column :events, :schedule_time, :date
     
-    Event.reset_collumn_information
+    Event.reset_column_information
     Event.find_each { |c| c.update_attribute(:schedule_time, c.schedule_time_string) }
     delete_column :events, :schedule_time_string
 
