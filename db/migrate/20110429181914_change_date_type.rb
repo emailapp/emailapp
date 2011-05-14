@@ -8,6 +8,14 @@ class ChangeDateType < ActiveRecord::Migration
     Event.reset_column_information
     Event.find_each { |c| c.update_attribute(:schedule_time, c.schedule_time_string) }
     remove_column :events, :schedule_time_string
+    
+    
+    rename_column :contacts, :birthday, :birthday_string
+    add_column :contacts, :birthday, :date
+    
+    Contact.reset_column_information
+    Contact.find_each { |c| c.update_attribute(:birthday, c.birthday_string) }
+    remove_column :contacts, :birthday_string
 
     end
     
