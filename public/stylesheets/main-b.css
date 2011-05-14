@@ -34,10 +34,9 @@ body {
   width: 900px;
   margin: 0 auto;
   background-color: #FFF;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
   -moz-box-shadow: 5px 5px 5px #505050; /* Firefox 3.6 and earlier */
   -webkit-box-shadow: 5px 5px 5px #505050; /* Safari and Chrome */
   box-shadow: 5px 5px 5px #505050; /*box-shadow: h-shadow v-shadow blur spread color;*/
@@ -48,6 +47,10 @@ body {
 #header {
   height: 80px;
   background-color: #E8E8E8;
+  -moz-border-radius-topright: 25px;
+  -moz-border-radius-topleft: 25px;
+  -webkit-border-top-right-radius: 25px;
+  -webkit-border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
 }
@@ -110,6 +113,10 @@ body {
   clear: both;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  -moz-border-radius-bottomright: 25px;
+  -moz-border-radius-bottomleft: 25px;
+  -webkit-border-bottom-right-radius: 25px;
+  -webkit-border-bottom-left-radius: 25px;
   background-image: -moz-radial-gradient(49% 53% 0deg,ellipse cover, #C2C2C2, #6E6E6E);
   background-image: -webkit-gradient(radial, 53 49, 721, 353 147, 0, from(#6E6E6E), to(#C2C2C2));
   font-family: "Trebuchet MS", Helvetica, sans-serif;
