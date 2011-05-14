@@ -14,7 +14,7 @@ class ChangeDateType < ActiveRecord::Migration
     add_column :contacts, :birthday, :date
     
     Contact.reset_column_information
-    Contact.find_each { |c| c.update_attribute(:birthday, c.birthday_string) }
+    Contact.find_each { |e| e.update_attribute(:birthday, e.birthday_string) }
     remove_column :contacts, :birthday_string
 
     end
